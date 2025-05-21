@@ -1,0 +1,223 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Fantasy Premier League API",
+    "description": "Custom Connector for accessing the Fantasy Premier League (FPL) public API.",
+    "version": "1.0"
+  },
+  "host": "fantasy.premierleague.com",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/bootstrap-static/": {
+      "get": {
+        "summary": "Get General Game Data",
+        "operationId": "GetGameData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/event-status/": {
+      "get": {
+        "summary": "Get Event Status",
+        "operationId": "GetEventStatus",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/fixtures/": {
+      "get": {
+        "summary": "Get Fixtures",
+        "operationId": "GetFixtures",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/event/{event_id}/live/": {
+      "get": {
+        "summary": "Get Live Gameweek Data",
+        "operationId": "GetGameweekLiveData",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/element-summary/{player_id}/": {
+      "get": {
+        "summary": "Get Player Details",
+        "operationId": "GetPlayerDetails",
+        "parameters": [
+          {
+            "name": "player_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/": {
+      "get": {
+        "summary": "Get Manager Summary",
+        "operationId": "GetManagerSummary",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/history/": {
+      "get": {
+        "summary": "Get Manager History",
+        "operationId": "GetManagerHistory",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/transfers/": {
+      "get": {
+        "summary": "Get Manager Transfers",
+        "operationId": "GetManagerTransfers",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/event/{event_id}/picks/": {
+      "get": {
+        "summary": "Get Manager Picks for Gameweek",
+        "operationId": "GetManagerPicks",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/leagues-classic/{league_id}/standings/": {
+      "get": {
+        "summary": "Get Classic League Standings",
+        "operationId": "GetClassicLeagueStandings",
+        "parameters": [
+          {
+            "name": "league_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Fantasy Premier League API",
+    "description": "Unofficial FPL API - Custom Connector for Power Platform",
+    "version": "1.0.0"
+  },
+  "host": "fantasy.premierleague.com",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/bootstrap-static/": {
+      "get": {
+        "summary": "Get general game data",
+        "operationId": "GetGameData",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/event-status/": {
+      "get": {
+        "summary": "Get event status",
+        "operationId": "GetEventStatus",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/fixtures/": {
+      "get": {
+        "summary": "Get all fixtures",
+        "operationId": "GetFixtures",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/event/{event_id}/live/": {
+      "get": {
+        "summary": "Get live gameweek data",
+        "operationId": "GetLiveGameweekData",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/element-summary/{player_id}/": {
+      "get": {
+        "summary": "Get player summary by ID",
+        "operationId": "GetPlayerSummary",
+        "parameters": [
+          {
+            "name": "player_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/": {
+      "get": {
+        "summary": "Get manager summary",
+        "operationId": "GetManagerSummary",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/history/": {
+      "get": {
+        "summary": "Get manager history",
+        "operationId": "GetManagerHistory",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/transfers/": {
+      "get": {
+        "summary": "Get manager transfers",
+        "operationId": "GetManagerTransfers",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/entry/{manager_id}/event/{event_id}/picks/": {
+      "get": {
+        "summary": "Get manager picks for event",
+        "operationId": "GetManagerPicks",
+        "parameters": [
+          {
+            "name": "manager_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/leagues-classic/{league_id}/standings/": {
+      "get": {
+        "summary": "Get classic league standings",
+        "operationId": "GetClassicLeagueStandings",
+        "parameters": [
+          {
+            "name": "league_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/leagues-h2h/{league_id}/standings/": {
+      "get": {
+        "summary": "Get H2H league standings",
+        "operationId": "GetH2HLeagueStandings",
+        "parameters": [
+          {
+            "name": "league_id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}

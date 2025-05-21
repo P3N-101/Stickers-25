@@ -1,0 +1,2401 @@
+basePath: /api
+consumes: []
+definitions: {}
+host: fantasy.premierleague.com
+info:
+  description: ''
+  title: PensPlaceFPL
+  version: '1.0'
+parameters: {}
+paths:
+  /bootstrap-static/:
+    get:
+      operationId: GetStatic
+      parameters: []
+      responses:
+        '100':
+          description: default
+          schema:
+            properties:
+              element_stats:
+                description: element_stats
+                items:
+                  properties:
+                    label:
+                      description: label
+                      type: string
+                    name:
+                      description: name
+                      type: string
+                  type: object
+                type: array
+              element_types:
+                description: element_types
+                items:
+                  properties:
+                    element_count:
+                      description: element_count
+                      format: int32
+                      type: integer
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    plural_name:
+                      description: plural_name
+                      type: string
+                    plural_name_short:
+                      description: plural_name_short
+                      type: string
+                    singular_name:
+                      description: singular_name
+                      type: string
+                    singular_name_short:
+                      description: singular_name_short
+                      type: string
+                    squad_max_play:
+                      description: squad_max_play
+                      format: int32
+                      type: integer
+                    squad_max_select:
+                      description: squad_max_select
+                      type: string
+                    squad_min_play:
+                      description: squad_min_play
+                      format: int32
+                      type: integer
+                    squad_min_select:
+                      description: squad_min_select
+                      type: string
+                    squad_select:
+                      description: squad_select
+                      format: int32
+                      type: integer
+                    sub_positions_locked:
+                      description: sub_positions_locked
+                      items:
+                        format: int32
+                        type: integer
+                      type: array
+                    ui_shirt_specific:
+                      description: ui_shirt_specific
+                      type: boolean
+                  type: object
+                type: array
+              elements:
+                description: elements
+                items:
+                  properties:
+                    assists:
+                      description: assists
+                      format: int32
+                      type: integer
+                    bonus:
+                      description: bonus
+                      format: int32
+                      type: integer
+                    bps:
+                      description: bps
+                      format: int32
+                      type: integer
+                    chance_of_playing_next_round:
+                      description: chance_of_playing_next_round
+                      format: int32
+                      type: integer
+                    chance_of_playing_this_round:
+                      description: chance_of_playing_this_round
+                      format: int32
+                      type: integer
+                    clean_sheets:
+                      description: clean_sheets
+                      format: int32
+                      type: integer
+                    clean_sheets_per_90:
+                      description: clean_sheets_per_90
+                      format: int32
+                      type: integer
+                    code:
+                      description: code
+                      format: int32
+                      type: integer
+                    corners_and_indirect_freekicks_order:
+                      description: corners_and_indirect_freekicks_order
+                      format: int32
+                      type: integer
+                    corners_and_indirect_freekicks_text:
+                      description: corners_and_indirect_freekicks_text
+                      type: string
+                    cost_change_event:
+                      description: cost_change_event
+                      format: int32
+                      type: integer
+                    cost_change_event_fall:
+                      description: cost_change_event_fall
+                      format: int32
+                      type: integer
+                    cost_change_start:
+                      description: cost_change_start
+                      format: int32
+                      type: integer
+                    cost_change_start_fall:
+                      description: cost_change_start_fall
+                      format: int32
+                      type: integer
+                    creativity:
+                      description: creativity
+                      type: string
+                    creativity_rank:
+                      description: creativity_rank
+                      format: int32
+                      type: integer
+                    creativity_rank_type:
+                      description: creativity_rank_type
+                      format: int32
+                      type: integer
+                    direct_freekicks_order:
+                      description: direct_freekicks_order
+                      type: string
+                    direct_freekicks_text:
+                      description: direct_freekicks_text
+                      type: string
+                    dreamteam_count:
+                      description: dreamteam_count
+                      format: int32
+                      type: integer
+                    element_type:
+                      description: element_type
+                      format: int32
+                      type: integer
+                    ep_next:
+                      description: ep_next
+                      type: string
+                    ep_this:
+                      description: ep_this
+                      type: string
+                    event_points:
+                      description: event_points
+                      format: int32
+                      type: integer
+                    expected_assists:
+                      description: expected_assists
+                      type: string
+                    expected_assists_per_90:
+                      description: expected_assists_per_90
+                      format: int32
+                      type: integer
+                    expected_goal_involvements:
+                      description: expected_goal_involvements
+                      type: string
+                    expected_goal_involvements_per_90:
+                      description: expected_goal_involvements_per_90
+                      format: int32
+                      type: integer
+                    expected_goals:
+                      description: expected_goals
+                      type: string
+                    expected_goals_conceded:
+                      description: expected_goals_conceded
+                      type: string
+                    expected_goals_conceded_per_90:
+                      description: expected_goals_conceded_per_90
+                      format: int32
+                      type: integer
+                    expected_goals_per_90:
+                      description: expected_goals_per_90
+                      format: int32
+                      type: integer
+                    first_name:
+                      description: first_name
+                      type: string
+                    form:
+                      description: form
+                      type: string
+                    form_rank:
+                      description: form_rank
+                      format: int32
+                      type: integer
+                    form_rank_type:
+                      description: form_rank_type
+                      format: int32
+                      type: integer
+                    goals_conceded:
+                      description: goals_conceded
+                      format: int32
+                      type: integer
+                    goals_conceded_per_90:
+                      description: goals_conceded_per_90
+                      format: int32
+                      type: integer
+                    goals_scored:
+                      description: goals_scored
+                      format: int32
+                      type: integer
+                    ict_index:
+                      description: ict_index
+                      type: string
+                    ict_index_rank:
+                      description: ict_index_rank
+                      format: int32
+                      type: integer
+                    ict_index_rank_type:
+                      description: ict_index_rank_type
+                      format: int32
+                      type: integer
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    in_dreamteam:
+                      description: in_dreamteam
+                      type: boolean
+                    influence:
+                      description: influence
+                      type: string
+                    influence_rank:
+                      description: influence_rank
+                      format: int32
+                      type: integer
+                    influence_rank_type:
+                      description: influence_rank_type
+                      format: int32
+                      type: integer
+                    minutes:
+                      description: minutes
+                      format: int32
+                      type: integer
+                    news:
+                      description: news
+                      type: string
+                    news_added:
+                      description: news_added
+                      type: string
+                    now_cost:
+                      description: now_cost
+                      format: int32
+                      type: integer
+                    now_cost_rank:
+                      description: now_cost_rank
+                      format: int32
+                      type: integer
+                    now_cost_rank_type:
+                      description: now_cost_rank_type
+                      format: int32
+                      type: integer
+                    own_goals:
+                      description: own_goals
+                      format: int32
+                      type: integer
+                    penalties_missed:
+                      description: penalties_missed
+                      format: int32
+                      type: integer
+                    penalties_order:
+                      description: penalties_order
+                      format: int32
+                      type: integer
+                    penalties_saved:
+                      description: penalties_saved
+                      format: int32
+                      type: integer
+                    penalties_text:
+                      description: penalties_text
+                      type: string
+                    photo:
+                      description: photo
+                      type: string
+                    points_per_game:
+                      description: points_per_game
+                      type: string
+                    points_per_game_rank:
+                      description: points_per_game_rank
+                      format: int32
+                      type: integer
+                    points_per_game_rank_type:
+                      description: points_per_game_rank_type
+                      format: int32
+                      type: integer
+                    red_cards:
+                      description: red_cards
+                      format: int32
+                      type: integer
+                    saves:
+                      description: saves
+                      format: int32
+                      type: integer
+                    saves_per_90:
+                      description: saves_per_90
+                      format: int32
+                      type: integer
+                    second_name:
+                      description: second_name
+                      type: string
+                    selected_by_percent:
+                      description: selected_by_percent
+                      type: string
+                    selected_rank:
+                      description: selected_rank
+                      format: int32
+                      type: integer
+                    selected_rank_type:
+                      description: selected_rank_type
+                      format: int32
+                      type: integer
+                    special:
+                      description: special
+                      type: boolean
+                    squad_number:
+                      description: squad_number
+                      type: string
+                    starts:
+                      description: starts
+                      format: int32
+                      type: integer
+                    starts_per_90:
+                      description: starts_per_90
+                      format: int32
+                      type: integer
+                    status:
+                      description: status
+                      type: string
+                    team:
+                      description: team
+                      format: int32
+                      type: integer
+                    team_code:
+                      description: team_code
+                      format: int32
+                      type: integer
+                    threat:
+                      description: threat
+                      type: string
+                    threat_rank:
+                      description: threat_rank
+                      format: int32
+                      type: integer
+                    threat_rank_type:
+                      description: threat_rank_type
+                      format: int32
+                      type: integer
+                    total_points:
+                      description: total_points
+                      format: int32
+                      type: integer
+                    transfers_in:
+                      description: transfers_in
+                      format: int32
+                      type: integer
+                    transfers_in_event:
+                      description: transfers_in_event
+                      format: int32
+                      type: integer
+                    transfers_out:
+                      description: transfers_out
+                      format: int32
+                      type: integer
+                    transfers_out_event:
+                      description: transfers_out_event
+                      format: int32
+                      type: integer
+                    value_form:
+                      description: value_form
+                      type: string
+                    value_season:
+                      description: value_season
+                      type: string
+                    web_name:
+                      description: web_name
+                      type: string
+                    yellow_cards:
+                      description: yellow_cards
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              events:
+                description: events
+                items:
+                  properties:
+                    average_entry_score:
+                      description: average_entry_score
+                      format: int32
+                      type: integer
+                    chip_plays:
+                      description: chip_plays
+                      items:
+                        properties:
+                          chip_name:
+                            description: chip_name
+                            type: string
+                          num_played:
+                            description: num_played
+                            format: int32
+                            type: integer
+                        type: object
+                      type: array
+                    cup_leagues_created:
+                      description: cup_leagues_created
+                      type: boolean
+                    data_checked:
+                      description: data_checked
+                      type: boolean
+                    deadline_time:
+                      description: deadline_time
+                      type: string
+                    deadline_time_epoch:
+                      description: deadline_time_epoch
+                      format: int32
+                      type: integer
+                    deadline_time_game_offset:
+                      description: deadline_time_game_offset
+                      format: int32
+                      type: integer
+                    finished:
+                      description: finished
+                      type: boolean
+                    h2h_ko_matches_created:
+                      description: h2h_ko_matches_created
+                      type: boolean
+                    highest_score:
+                      description: highest_score
+                      type: string
+                    highest_scoring_entry:
+                      description: highest_scoring_entry
+                      type: string
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    is_current:
+                      description: is_current
+                      type: boolean
+                    is_next:
+                      description: is_next
+                      type: boolean
+                    is_previous:
+                      description: is_previous
+                      type: boolean
+                    most_captained:
+                      description: most_captained
+                      type: string
+                    most_selected:
+                      description: most_selected
+                      type: string
+                    most_transferred_in:
+                      description: most_transferred_in
+                      type: string
+                    most_vice_captained:
+                      description: most_vice_captained
+                      type: string
+                    name:
+                      description: name
+                      type: string
+                    ranked_count:
+                      description: ranked_count
+                      format: int32
+                      type: integer
+                    release_time:
+                      description: release_time
+                      type: string
+                    top_element:
+                      description: top_element
+                      type: string
+                    top_element_info:
+                      properties:
+                        id:
+                          description: id
+                          format: int32
+                          type: integer
+                        points:
+                          description: points
+                          format: int32
+                          type: integer
+                      type: object
+                    transfers_made:
+                      description: transfers_made
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              game_settings:
+                description: game_settings
+                properties:
+                  cup_qualifying_method:
+                    description: cup_qualifying_method
+                    type: string
+                  cup_start_event_id:
+                    description: cup_start_event_id
+                    type: string
+                  cup_stop_event_id:
+                    description: cup_stop_event_id
+                    type: string
+                  cup_type:
+                    description: cup_type
+                    type: string
+                  featured_entries:
+                    description: featured_entries
+                    items: {}
+                    type: array
+                  league_h2h_tiebreak_stats:
+                    description: league_h2h_tiebreak_stats
+                    items:
+                      type: string
+                    type: array
+                  league_join_private_max:
+                    description: league_join_private_max
+                    format: int32
+                    type: integer
+                  league_join_public_max:
+                    description: league_join_public_max
+                    format: int32
+                    type: integer
+                  league_ko_first_instead_of_random:
+                    description: league_ko_first_instead_of_random
+                    type: boolean
+                  league_max_ko_rounds_private_h2h:
+                    description: league_max_ko_rounds_private_h2h
+                    format: int32
+                    type: integer
+                  league_max_size_private_h2h:
+                    description: league_max_size_private_h2h
+                    format: int32
+                    type: integer
+                  league_max_size_public_classic:
+                    description: league_max_size_public_classic
+                    format: int32
+                    type: integer
+                  league_max_size_public_h2h:
+                    description: league_max_size_public_h2h
+                    format: int32
+                    type: integer
+                  league_points_h2h_draw:
+                    description: league_points_h2h_draw
+                    format: int32
+                    type: integer
+                  league_points_h2h_lose:
+                    description: league_points_h2h_lose
+                    format: int32
+                    type: integer
+                  league_points_h2h_win:
+                    description: league_points_h2h_win
+                    format: int32
+                    type: integer
+                  league_prefix_public:
+                    description: league_prefix_public
+                    type: string
+                  max_extra_free_transfers:
+                    description: max_extra_free_transfers
+                    format: int32
+                    type: integer
+                  percentile_ranks:
+                    description: percentile_ranks
+                    items:
+                      format: int32
+                      type: integer
+                    type: array
+                  squad_squadplay:
+                    description: squad_squadplay
+                    format: int32
+                    type: integer
+                  squad_squadsize:
+                    description: squad_squadsize
+                    format: int32
+                    type: integer
+                  squad_team_limit:
+                    description: squad_team_limit
+                    format: int32
+                    type: integer
+                  squad_total_spend:
+                    description: squad_total_spend
+                    format: int32
+                    type: integer
+                  stats_form_days:
+                    description: stats_form_days
+                    format: int32
+                    type: integer
+                  sys_vice_captain_enabled:
+                    description: sys_vice_captain_enabled
+                    type: boolean
+                  timezone:
+                    description: timezone
+                    type: string
+                  transfers_cap:
+                    description: transfers_cap
+                    format: int32
+                    type: integer
+                  transfers_sell_on_fee:
+                    description: transfers_sell_on_fee
+                    format: float
+                    type: number
+                  ui_currency_multiplier:
+                    description: ui_currency_multiplier
+                    format: int32
+                    type: integer
+                  ui_special_shirt_exclusions:
+                    description: ui_special_shirt_exclusions
+                    items: {}
+                    type: array
+                  ui_use_special_shirts:
+                    description: ui_use_special_shirts
+                    type: boolean
+                type: object
+              phases:
+                description: phases
+                items:
+                  properties:
+                    highest_score:
+                      description: highest_score
+                      type: string
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    name:
+                      description: name
+                      type: string
+                    start_event:
+                      description: start_event
+                      format: int32
+                      type: integer
+                    stop_event:
+                      description: stop_event
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              teams:
+                description: teams
+                items:
+                  properties:
+                    code:
+                      description: code
+                      format: int32
+                      type: integer
+                    draw:
+                      description: draw
+                      format: int32
+                      type: integer
+                    form:
+                      description: form
+                      type: string
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    loss:
+                      description: loss
+                      format: int32
+                      type: integer
+                    name:
+                      description: name
+                      type: string
+                    played:
+                      description: played
+                      format: int32
+                      type: integer
+                    points:
+                      description: points
+                      format: int32
+                      type: integer
+                    position:
+                      description: position
+                      format: int32
+                      type: integer
+                    pulse_id:
+                      description: pulse_id
+                      format: int32
+                      type: integer
+                    short_name:
+                      description: short_name
+                      type: string
+                    strength:
+                      description: strength
+                      format: int32
+                      type: integer
+                    strength_attack_away:
+                      description: strength_attack_away
+                      format: int32
+                      type: integer
+                    strength_attack_home:
+                      description: strength_attack_home
+                      format: int32
+                      type: integer
+                    strength_defence_away:
+                      description: strength_defence_away
+                      format: int32
+                      type: integer
+                    strength_defence_home:
+                      description: strength_defence_home
+                      format: int32
+                      type: integer
+                    strength_overall_away:
+                      description: strength_overall_away
+                      format: int32
+                      type: integer
+                    strength_overall_home:
+                      description: strength_overall_home
+                      format: int32
+                      type: integer
+                    team_division:
+                      description: team_division
+                      type: string
+                    unavailable:
+                      description: unavailable
+                      type: boolean
+                    win:
+                      description: win
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              total_players:
+                description: total_players
+                format: int32
+                type: integer
+            type: object
+        default:
+          description: default
+          schema:
+            properties:
+              element_stats:
+                description: element_stats
+                items:
+                  properties:
+                    label:
+                      description: label
+                      type: string
+                    name:
+                      description: name
+                      type: string
+                  type: object
+                type: array
+              element_types:
+                description: element_types
+                items:
+                  properties:
+                    element_count:
+                      description: element_count
+                      format: int32
+                      type: integer
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    plural_name:
+                      description: plural_name
+                      type: string
+                    plural_name_short:
+                      description: plural_name_short
+                      type: string
+                    singular_name:
+                      description: singular_name
+                      type: string
+                    singular_name_short:
+                      description: singular_name_short
+                      type: string
+                    squad_max_play:
+                      description: squad_max_play
+                      format: int32
+                      type: integer
+                    squad_max_select:
+                      description: squad_max_select
+                      type: string
+                    squad_min_play:
+                      description: squad_min_play
+                      format: int32
+                      type: integer
+                    squad_min_select:
+                      description: squad_min_select
+                      type: string
+                    squad_select:
+                      description: squad_select
+                      format: int32
+                      type: integer
+                    sub_positions_locked:
+                      description: sub_positions_locked
+                      items:
+                        format: int32
+                        type: integer
+                      type: array
+                    ui_shirt_specific:
+                      description: ui_shirt_specific
+                      type: boolean
+                  type: object
+                type: array
+              elements:
+                description: elements
+                items:
+                  properties:
+                    assists:
+                      description: assists
+                      format: int32
+                      type: integer
+                    bonus:
+                      description: bonus
+                      format: int32
+                      type: integer
+                    bps:
+                      description: bps
+                      format: int32
+                      type: integer
+                    chance_of_playing_next_round:
+                      description: chance_of_playing_next_round
+                      format: int32
+                      type: integer
+                    chance_of_playing_this_round:
+                      description: chance_of_playing_this_round
+                      format: int32
+                      type: integer
+                    clean_sheets:
+                      description: clean_sheets
+                      format: int32
+                      type: integer
+                    clean_sheets_per_90:
+                      description: clean_sheets_per_90
+                      format: int32
+                      type: integer
+                    code:
+                      description: code
+                      format: int32
+                      type: integer
+                    corners_and_indirect_freekicks_order:
+                      description: corners_and_indirect_freekicks_order
+                      format: int32
+                      type: integer
+                    corners_and_indirect_freekicks_text:
+                      description: corners_and_indirect_freekicks_text
+                      type: string
+                    cost_change_event:
+                      description: cost_change_event
+                      format: int32
+                      type: integer
+                    cost_change_event_fall:
+                      description: cost_change_event_fall
+                      format: int32
+                      type: integer
+                    cost_change_start:
+                      description: cost_change_start
+                      format: int32
+                      type: integer
+                    cost_change_start_fall:
+                      description: cost_change_start_fall
+                      format: int32
+                      type: integer
+                    creativity:
+                      description: creativity
+                      type: string
+                    creativity_rank:
+                      description: creativity_rank
+                      format: int32
+                      type: integer
+                    creativity_rank_type:
+                      description: creativity_rank_type
+                      format: int32
+                      type: integer
+                    direct_freekicks_order:
+                      description: direct_freekicks_order
+                      type: string
+                    direct_freekicks_text:
+                      description: direct_freekicks_text
+                      type: string
+                    dreamteam_count:
+                      description: dreamteam_count
+                      format: int32
+                      type: integer
+                    element_type:
+                      description: element_type
+                      format: int32
+                      type: integer
+                    ep_next:
+                      description: ep_next
+                      type: string
+                    ep_this:
+                      description: ep_this
+                      type: string
+                    event_points:
+                      description: event_points
+                      format: int32
+                      type: integer
+                    expected_assists:
+                      description: expected_assists
+                      type: string
+                    expected_assists_per_90:
+                      description: expected_assists_per_90
+                      format: int32
+                      type: integer
+                    expected_goal_involvements:
+                      description: expected_goal_involvements
+                      type: string
+                    expected_goal_involvements_per_90:
+                      description: expected_goal_involvements_per_90
+                      format: int32
+                      type: integer
+                    expected_goals:
+                      description: expected_goals
+                      type: string
+                    expected_goals_conceded:
+                      description: expected_goals_conceded
+                      type: string
+                    expected_goals_conceded_per_90:
+                      description: expected_goals_conceded_per_90
+                      format: int32
+                      type: integer
+                    expected_goals_per_90:
+                      description: expected_goals_per_90
+                      format: int32
+                      type: integer
+                    first_name:
+                      description: first_name
+                      type: string
+                    form:
+                      description: form
+                      type: string
+                    form_rank:
+                      description: form_rank
+                      format: int32
+                      type: integer
+                    form_rank_type:
+                      description: form_rank_type
+                      format: int32
+                      type: integer
+                    goals_conceded:
+                      description: goals_conceded
+                      format: int32
+                      type: integer
+                    goals_conceded_per_90:
+                      description: goals_conceded_per_90
+                      format: int32
+                      type: integer
+                    goals_scored:
+                      description: goals_scored
+                      format: int32
+                      type: integer
+                    ict_index:
+                      description: ict_index
+                      type: string
+                    ict_index_rank:
+                      description: ict_index_rank
+                      format: int32
+                      type: integer
+                    ict_index_rank_type:
+                      description: ict_index_rank_type
+                      format: int32
+                      type: integer
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    in_dreamteam:
+                      description: in_dreamteam
+                      type: boolean
+                    influence:
+                      description: influence
+                      type: string
+                    influence_rank:
+                      description: influence_rank
+                      format: int32
+                      type: integer
+                    influence_rank_type:
+                      description: influence_rank_type
+                      format: int32
+                      type: integer
+                    minutes:
+                      description: minutes
+                      format: int32
+                      type: integer
+                    news:
+                      description: news
+                      type: string
+                    news_added:
+                      description: news_added
+                      type: string
+                    now_cost:
+                      description: now_cost
+                      format: int32
+                      type: integer
+                    now_cost_rank:
+                      description: now_cost_rank
+                      format: int32
+                      type: integer
+                    now_cost_rank_type:
+                      description: now_cost_rank_type
+                      format: int32
+                      type: integer
+                    own_goals:
+                      description: own_goals
+                      format: int32
+                      type: integer
+                    penalties_missed:
+                      description: penalties_missed
+                      format: int32
+                      type: integer
+                    penalties_order:
+                      description: penalties_order
+                      format: int32
+                      type: integer
+                    penalties_saved:
+                      description: penalties_saved
+                      format: int32
+                      type: integer
+                    penalties_text:
+                      description: penalties_text
+                      type: string
+                    photo:
+                      description: photo
+                      type: string
+                    points_per_game:
+                      description: points_per_game
+                      type: string
+                    points_per_game_rank:
+                      description: points_per_game_rank
+                      format: int32
+                      type: integer
+                    points_per_game_rank_type:
+                      description: points_per_game_rank_type
+                      format: int32
+                      type: integer
+                    red_cards:
+                      description: red_cards
+                      format: int32
+                      type: integer
+                    saves:
+                      description: saves
+                      format: int32
+                      type: integer
+                    saves_per_90:
+                      description: saves_per_90
+                      format: int32
+                      type: integer
+                    second_name:
+                      description: second_name
+                      type: string
+                    selected_by_percent:
+                      description: selected_by_percent
+                      type: string
+                    selected_rank:
+                      description: selected_rank
+                      format: int32
+                      type: integer
+                    selected_rank_type:
+                      description: selected_rank_type
+                      format: int32
+                      type: integer
+                    special:
+                      description: special
+                      type: boolean
+                    squad_number:
+                      description: squad_number
+                      type: string
+                    starts:
+                      description: starts
+                      format: int32
+                      type: integer
+                    starts_per_90:
+                      description: starts_per_90
+                      format: int32
+                      type: integer
+                    status:
+                      description: status
+                      type: string
+                    team:
+                      description: team
+                      format: int32
+                      type: integer
+                    team_code:
+                      description: team_code
+                      format: int32
+                      type: integer
+                    threat:
+                      description: threat
+                      type: string
+                    threat_rank:
+                      description: threat_rank
+                      format: int32
+                      type: integer
+                    threat_rank_type:
+                      description: threat_rank_type
+                      format: int32
+                      type: integer
+                    total_points:
+                      description: total_points
+                      format: int32
+                      type: integer
+                    transfers_in:
+                      description: transfers_in
+                      format: int32
+                      type: integer
+                    transfers_in_event:
+                      description: transfers_in_event
+                      format: int32
+                      type: integer
+                    transfers_out:
+                      description: transfers_out
+                      format: int32
+                      type: integer
+                    transfers_out_event:
+                      description: transfers_out_event
+                      format: int32
+                      type: integer
+                    value_form:
+                      description: value_form
+                      type: string
+                    value_season:
+                      description: value_season
+                      type: string
+                    web_name:
+                      description: web_name
+                      type: string
+                    yellow_cards:
+                      description: yellow_cards
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              events:
+                description: events
+                items:
+                  properties:
+                    average_entry_score:
+                      description: average_entry_score
+                      format: int32
+                      type: integer
+                    chip_plays:
+                      description: chip_plays
+                      items:
+                        properties:
+                          chip_name:
+                            description: chip_name
+                            type: string
+                          num_played:
+                            description: num_played
+                            format: int32
+                            type: integer
+                        type: object
+                      type: array
+                    cup_leagues_created:
+                      description: cup_leagues_created
+                      type: boolean
+                    data_checked:
+                      description: data_checked
+                      type: boolean
+                    deadline_time:
+                      description: deadline_time
+                      type: string
+                    deadline_time_epoch:
+                      description: deadline_time_epoch
+                      format: int32
+                      type: integer
+                    deadline_time_game_offset:
+                      description: deadline_time_game_offset
+                      format: int32
+                      type: integer
+                    finished:
+                      description: finished
+                      type: boolean
+                    h2h_ko_matches_created:
+                      description: h2h_ko_matches_created
+                      type: boolean
+                    highest_score:
+                      allOf:
+                      - description: highest_score
+                        format: int32
+                        type: integer
+                    highest_scoring_entry:
+                      allOf:
+                      - description: highest_scoring_entry
+                        format: int32
+                        type: integer
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    is_current:
+                      description: is_current
+                      type: boolean
+                    is_next:
+                      description: is_next
+                      type: boolean
+                    is_previous:
+                      description: is_previous
+                      type: boolean
+                    most_captained:
+                      description: most_captained
+                      type: string
+                    most_selected:
+                      allOf:
+                      - description: most_selected
+                        format: int32
+                        type: integer
+                    most_transferred_in:
+                      allOf:
+                      - description: most_transferred_in
+                        format: int32
+                        type: integer
+                    most_vice_captained:
+                      description: most_vice_captained
+                      type: string
+                    name:
+                      description: name
+                      type: string
+                    ranked_count:
+                      description: ranked_count
+                      format: int32
+                      type: integer
+                    release_time:
+                      description: release_time
+                      type: string
+                    top_element:
+                      allOf:
+                      - description: top_element
+                        format: int32
+                        type: integer
+                    top_element_info:
+                      description: top_element_info
+                      type: string
+                    transfers_made:
+                      description: transfers_made
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              game_settings:
+                description: game_settings
+                properties:
+                  cup_qualifying_method:
+                    description: cup_qualifying_method
+                    type: string
+                  cup_start_event_id:
+                    description: cup_start_event_id
+                    type: string
+                  cup_stop_event_id:
+                    description: cup_stop_event_id
+                    type: string
+                  cup_type:
+                    description: cup_type
+                    type: string
+                  featured_entries:
+                    description: featured_entries
+                    items: {}
+                    type: array
+                  league_h2h_tiebreak_stats:
+                    description: league_h2h_tiebreak_stats
+                    items:
+                      type: string
+                    type: array
+                  league_join_private_max:
+                    description: league_join_private_max
+                    format: int32
+                    type: integer
+                  league_join_public_max:
+                    description: league_join_public_max
+                    format: int32
+                    type: integer
+                  league_ko_first_instead_of_random:
+                    description: league_ko_first_instead_of_random
+                    type: boolean
+                  league_max_ko_rounds_private_h2h:
+                    description: league_max_ko_rounds_private_h2h
+                    format: int32
+                    type: integer
+                  league_max_size_private_h2h:
+                    description: league_max_size_private_h2h
+                    format: int32
+                    type: integer
+                  league_max_size_public_classic:
+                    description: league_max_size_public_classic
+                    format: int32
+                    type: integer
+                  league_max_size_public_h2h:
+                    description: league_max_size_public_h2h
+                    format: int32
+                    type: integer
+                  league_points_h2h_draw:
+                    description: league_points_h2h_draw
+                    format: int32
+                    type: integer
+                  league_points_h2h_lose:
+                    description: league_points_h2h_lose
+                    format: int32
+                    type: integer
+                  league_points_h2h_win:
+                    description: league_points_h2h_win
+                    format: int32
+                    type: integer
+                  league_prefix_public:
+                    description: league_prefix_public
+                    type: string
+                  max_extra_free_transfers:
+                    description: max_extra_free_transfers
+                    format: int32
+                    type: integer
+                  percentile_ranks:
+                    description: percentile_ranks
+                    items:
+                      format: int32
+                      type: integer
+                    type: array
+                  squad_squadplay:
+                    description: squad_squadplay
+                    format: int32
+                    type: integer
+                  squad_squadsize:
+                    description: squad_squadsize
+                    format: int32
+                    type: integer
+                  squad_team_limit:
+                    description: squad_team_limit
+                    format: int32
+                    type: integer
+                  squad_total_spend:
+                    description: squad_total_spend
+                    format: int32
+                    type: integer
+                  stats_form_days:
+                    description: stats_form_days
+                    format: int32
+                    type: integer
+                  sys_vice_captain_enabled:
+                    description: sys_vice_captain_enabled
+                    type: boolean
+                  timezone:
+                    description: timezone
+                    type: string
+                  transfers_cap:
+                    description: transfers_cap
+                    format: int32
+                    type: integer
+                  transfers_sell_on_fee:
+                    description: transfers_sell_on_fee
+                    format: float
+                    type: number
+                  ui_currency_multiplier:
+                    description: ui_currency_multiplier
+                    format: int32
+                    type: integer
+                  ui_special_shirt_exclusions:
+                    description: ui_special_shirt_exclusions
+                    items: {}
+                    type: array
+                  ui_use_special_shirts:
+                    description: ui_use_special_shirts
+                    type: boolean
+                type: object
+              phases:
+                description: phases
+                items:
+                  properties:
+                    highest_score:
+                      description: highest_score
+                      type: string
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    name:
+                      description: name
+                      type: string
+                    start_event:
+                      description: start_event
+                      format: int32
+                      type: integer
+                    stop_event:
+                      description: stop_event
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              teams:
+                description: teams
+                items:
+                  properties:
+                    code:
+                      description: code
+                      format: int32
+                      type: integer
+                    draw:
+                      description: draw
+                      format: int32
+                      type: integer
+                    form:
+                      description: form
+                      type: string
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    loss:
+                      description: loss
+                      format: int32
+                      type: integer
+                    name:
+                      description: name
+                      type: string
+                    played:
+                      description: played
+                      format: int32
+                      type: integer
+                    points:
+                      description: points
+                      format: int32
+                      type: integer
+                    position:
+                      description: position
+                      format: int32
+                      type: integer
+                    pulse_id:
+                      description: pulse_id
+                      format: int32
+                      type: integer
+                    short_name:
+                      description: short_name
+                      type: string
+                    strength:
+                      description: strength
+                      format: int32
+                      type: integer
+                    strength_attack_away:
+                      description: strength_attack_away
+                      format: int32
+                      type: integer
+                    strength_attack_home:
+                      description: strength_attack_home
+                      format: int32
+                      type: integer
+                    strength_defence_away:
+                      description: strength_defence_away
+                      format: int32
+                      type: integer
+                    strength_defence_home:
+                      description: strength_defence_home
+                      format: int32
+                      type: integer
+                    strength_overall_away:
+                      description: strength_overall_away
+                      format: int32
+                      type: integer
+                    strength_overall_home:
+                      description: strength_overall_home
+                      format: int32
+                      type: integer
+                    team_division:
+                      description: team_division
+                      type: string
+                    unavailable:
+                      description: unavailable
+                      type: boolean
+                    win:
+                      description: win
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              total_players:
+                description: total_players
+                format: int32
+                type: integer
+            type: object
+      summary: GetStatic
+  /element-summary/{element}/:
+    get:
+      operationId: GetElementDetail
+      parameters:
+      - in: path
+        name: element
+        required: true
+        type: string
+      responses:
+        default:
+          description: default
+          schema:
+            properties:
+              fixtures:
+                description: fixtures
+                items:
+                  properties:
+                    code:
+                      description: code
+                      format: int32
+                      type: integer
+                    difficulty:
+                      description: difficulty
+                      format: int32
+                      type: integer
+                    event:
+                      description: event
+                      format: int32
+                      type: integer
+                    event_name:
+                      description: event_name
+                      type: string
+                    finished:
+                      description: finished
+                      type: boolean
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    is_home:
+                      description: is_home
+                      type: boolean
+                    kickoff_time:
+                      description: kickoff_time
+                      type: string
+                    minutes:
+                      description: minutes
+                      format: int32
+                      type: integer
+                    provisional_start_time:
+                      description: provisional_start_time
+                      type: boolean
+                    team_a:
+                      description: team_a
+                      format: int32
+                      type: integer
+                    team_a_score:
+                      description: team_a_score
+                      type: string
+                    team_h:
+                      description: team_h
+                      format: int32
+                      type: integer
+                    team_h_score:
+                      description: team_h_score
+                      type: string
+                  type: object
+                type: array
+              history:
+                description: history
+                items:
+                  properties:
+                    assists:
+                      description: assists
+                      format: int32
+                      type: integer
+                    bonus:
+                      description: bonus
+                      format: int32
+                      type: integer
+                    bps:
+                      description: bps
+                      format: int32
+                      type: integer
+                    clean_sheets:
+                      description: clean_sheets
+                      format: int32
+                      type: integer
+                    creativity:
+                      description: creativity
+                      type: string
+                    element:
+                      description: element
+                      format: int32
+                      type: integer
+                    expected_assists:
+                      description: expected_assists
+                      type: string
+                    expected_goal_involvements:
+                      description: expected_goal_involvements
+                      type: string
+                    expected_goals:
+                      description: expected_goals
+                      type: string
+                    expected_goals_conceded:
+                      description: expected_goals_conceded
+                      type: string
+                    fixture:
+                      description: fixture
+                      format: int32
+                      type: integer
+                    goals_conceded:
+                      description: goals_conceded
+                      format: int32
+                      type: integer
+                    goals_scored:
+                      description: goals_scored
+                      format: int32
+                      type: integer
+                    ict_index:
+                      description: ict_index
+                      type: string
+                    influence:
+                      description: influence
+                      type: string
+                    kickoff_time:
+                      description: kickoff_time
+                      type: string
+                    minutes:
+                      description: minutes
+                      format: int32
+                      type: integer
+                    opponent_team:
+                      description: opponent_team
+                      format: int32
+                      type: integer
+                    own_goals:
+                      description: own_goals
+                      format: int32
+                      type: integer
+                    penalties_missed:
+                      description: penalties_missed
+                      format: int32
+                      type: integer
+                    penalties_saved:
+                      description: penalties_saved
+                      format: int32
+                      type: integer
+                    red_cards:
+                      description: red_cards
+                      format: int32
+                      type: integer
+                    round:
+                      description: round
+                      format: int32
+                      type: integer
+                    saves:
+                      description: saves
+                      format: int32
+                      type: integer
+                    selected:
+                      description: selected
+                      format: int32
+                      type: integer
+                    starts:
+                      description: starts
+                      format: int32
+                      type: integer
+                    team_a_score:
+                      description: team_a_score
+                      type: string
+                    team_h_score:
+                      description: team_h_score
+                      type: string
+                    threat:
+                      description: threat
+                      type: string
+                    total_points:
+                      description: total_points
+                      format: int32
+                      type: integer
+                    transfers_balance:
+                      description: transfers_balance
+                      format: int32
+                      type: integer
+                    transfers_in:
+                      description: transfers_in
+                      format: int32
+                      type: integer
+                    transfers_out:
+                      description: transfers_out
+                      format: int32
+                      type: integer
+                    value:
+                      description: value
+                      format: int32
+                      type: integer
+                    was_home:
+                      description: was_home
+                      type: boolean
+                    yellow_cards:
+                      description: yellow_cards
+                      format: int32
+                      type: integer
+                  type: object
+                type: array
+              history_past:
+                description: history_past
+                items: {}
+                type: array
+            type: object
+      summary: GetElementDetail
+  /element-summary/{player_id}/:
+    get:
+      operationId: GetPlayerSummary
+      parameters:
+      - in: path
+        name: player_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get player summary by ID
+  /entry/{managerId}/:
+    get:
+      operationId: GetManager
+      parameters:
+      - in: path
+        name: managerId
+        required: true
+        type: string
+      responses:
+        default:
+          description: default
+          schema:
+            properties:
+              current_event:
+                description: current_event
+                format: int32
+                type: integer
+              entered_events:
+                description: entered_events
+                items:
+                  format: int32
+                  type: integer
+                type: array
+              favourite_team:
+                description: favourite_team
+                format: int32
+                type: integer
+              id:
+                description: id
+                format: int32
+                type: integer
+              joined_time:
+                description: joined_time
+                type: string
+              kit:
+                description: kit
+                properties:
+                  kit_shirt_base:
+                    description: kit_shirt_base
+                    type: string
+                  kit_shirt_logo:
+                    description: kit_shirt_logo
+                    type: string
+                  kit_shirt_secondary:
+                    description: kit_shirt_secondary
+                    type: string
+                  kit_shirt_sleeves:
+                    description: kit_shirt_sleeves
+                    type: string
+                  kit_shirt_type:
+                    description: kit_shirt_type
+                    type: string
+                  kit_shorts:
+                    description: kit_shorts
+                    type: string
+                  kit_socks_base:
+                    description: kit_socks_base
+                    type: string
+                  kit_socks_secondary:
+                    description: kit_socks_secondary
+                    type: string
+                  kit_socks_type:
+                    description: kit_socks_type
+                    type: string
+                type: object
+              last_deadline_bank:
+                description: last_deadline_bank
+                format: int32
+                type: integer
+              last_deadline_total_transfers:
+                description: last_deadline_total_transfers
+                format: int32
+                type: integer
+              last_deadline_value:
+                description: last_deadline_value
+                format: int32
+                type: integer
+              leagues:
+                description: leagues
+                properties:
+                  classic:
+                    description: classic
+                    items:
+                      properties:
+                        admin_entry:
+                          description: admin_entry
+                          format: int32
+                          type: integer
+                        closed:
+                          description: closed
+                          type: boolean
+                        created:
+                          description: created
+                          type: string
+                        cup_league:
+                          description: cup_league
+                          type: string
+                        cup_qualified:
+                          description: cup_qualified
+                          type: string
+                        entry_can_admin:
+                          description: entry_can_admin
+                          type: boolean
+                        entry_can_invite:
+                          description: entry_can_invite
+                          type: boolean
+                        entry_can_leave:
+                          description: entry_can_leave
+                          type: boolean
+                        entry_last_rank:
+                          description: entry_last_rank
+                          format: int32
+                          type: integer
+                        entry_percentile_rank:
+                          description: entry_percentile_rank
+                          format: int32
+                          type: integer
+                        entry_rank:
+                          description: entry_rank
+                          format: int32
+                          type: integer
+                        has_cup:
+                          description: has_cup
+                          type: boolean
+                        id:
+                          description: id
+                          format: int32
+                          type: integer
+                        league_type:
+                          description: league_type
+                          type: string
+                        max_entries:
+                          description: max_entries
+                          type: string
+                        name:
+                          description: name
+                          type: string
+                        rank:
+                          description: rank
+                          type: string
+                        rank_count:
+                          description: rank_count
+                          format: int32
+                          type: integer
+                        scoring:
+                          description: scoring
+                          type: string
+                        short_name:
+                          description: short_name
+                          type: string
+                        start_event:
+                          description: start_event
+                          format: int32
+                          type: integer
+                      type: object
+                    type: array
+                  cup:
+                    description: cup
+                    properties:
+                      cup_league:
+                        description: cup_league
+                        type: string
+                      matches:
+                        description: matches
+                        items: {}
+                        type: array
+                      status:
+                        description: status
+                        properties:
+                          qualification_event:
+                            description: qualification_event
+                            type: string
+                          qualification_numbers:
+                            description: qualification_numbers
+                            type: string
+                          qualification_rank:
+                            description: qualification_rank
+                            type: string
+                          qualification_state:
+                            description: qualification_state
+                            type: string
+                        type: object
+                    type: object
+                  cup_matches:
+                    description: cup_matches
+                    items:
+                      properties:
+                        entry_1_draw:
+                          description: entry_1_draw
+                          format: int32
+                          type: integer
+                        entry_1_entry:
+                          description: entry_1_entry
+                          format: int32
+                          type: integer
+                        entry_1_loss:
+                          description: entry_1_loss
+                          format: int32
+                          type: integer
+                        entry_1_name:
+                          description: entry_1_name
+                          type: string
+                        entry_1_player_name:
+                          description: entry_1_player_name
+                          type: string
+                        entry_1_points:
+                          description: entry_1_points
+                          format: int32
+                          type: integer
+                        entry_1_total:
+                          description: entry_1_total
+                          format: int32
+                          type: integer
+                        entry_1_win:
+                          description: entry_1_win
+                          format: int32
+                          type: integer
+                        entry_2_draw:
+                          description: entry_2_draw
+                          format: int32
+                          type: integer
+                        entry_2_entry:
+                          description: entry_2_entry
+                          format: int32
+                          type: integer
+                        entry_2_loss:
+                          description: entry_2_loss
+                          format: int32
+                          type: integer
+                        entry_2_name:
+                          description: entry_2_name
+                          type: string
+                        entry_2_player_name:
+                          description: entry_2_player_name
+                          type: string
+                        entry_2_points:
+                          description: entry_2_points
+                          format: int32
+                          type: integer
+                        entry_2_total:
+                          description: entry_2_total
+                          format: int32
+                          type: integer
+                        entry_2_win:
+                          description: entry_2_win
+                          format: int32
+                          type: integer
+                        event:
+                          description: event
+                          format: int32
+                          type: integer
+                        id:
+                          description: id
+                          format: int32
+                          type: integer
+                        is_bye:
+                          description: is_bye
+                          type: boolean
+                        is_knockout:
+                          description: is_knockout
+                          type: boolean
+                        knockout_name:
+                          description: knockout_name
+                          type: string
+                        league:
+                          description: league
+                          format: int32
+                          type: integer
+                        seed_value:
+                          description: seed_value
+                          type: string
+                        tiebreak:
+                          description: tiebreak
+                          type: string
+                        winner:
+                          description: winner
+                          format: int32
+                          type: integer
+                      type: object
+                    type: array
+                  h2h:
+                    description: h2h
+                    items: {}
+                    type: array
+                type: object
+              name:
+                description: name
+                type: string
+              name_change_blocked:
+                description: name_change_blocked
+                type: boolean
+              player_first_name:
+                description: player_first_name
+                type: string
+              player_last_name:
+                description: player_last_name
+                type: string
+              player_region_id:
+                description: player_region_id
+                format: int32
+                type: integer
+              player_region_iso_code_long:
+                description: player_region_iso_code_long
+                type: string
+              player_region_iso_code_short:
+                description: player_region_iso_code_short
+                type: string
+              player_region_name:
+                description: player_region_name
+                type: string
+              started_event:
+                description: started_event
+                format: int32
+                type: integer
+              summary_event_points:
+                description: summary_event_points
+                format: int32
+                type: integer
+              summary_event_rank:
+                description: summary_event_rank
+                format: int32
+                type: integer
+              summary_overall_points:
+                description: summary_overall_points
+                format: int32
+                type: integer
+              summary_overall_rank:
+                description: summary_overall_rank
+                format: int32
+                type: integer
+              years_active:
+                description: years_active
+                format: int32
+                type: integer
+            type: object
+      summary: GetManager
+  /entry/{manager_id}/history/:
+    get:
+      operationId: GetManagerHistory
+      parameters:
+      - in: path
+        name: manager_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get manager history
+  /entry/{manager_id}/transfers/:
+    get:
+      operationId: GetManagerTransfers
+      parameters:
+      - in: path
+        name: manager_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get manager transfers
+  /event-status/:
+    get:
+      operationId: GetEventStatus
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get event status
+  /event/{event_id}/live/:
+    get:
+      operationId: GetLiveGameweekData
+      parameters:
+      - in: path
+        name: event_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get live gameweek data
+  /event/{week}/live/:
+    get:
+      operationId: GetGameWeek
+      parameters:
+      - in: path
+        name: week
+        required: true
+        type: string
+      responses:
+        default:
+          description: default
+          schema:
+            properties:
+              elements:
+                description: elements
+                items:
+                  properties:
+                    explain:
+                      description: explain
+                      items:
+                        properties:
+                          fixture:
+                            description: fixture
+                            format: int32
+                            type: integer
+                          stats:
+                            description: stats
+                            items:
+                              properties:
+                                identifier:
+                                  description: identifier
+                                  type: string
+                                points:
+                                  description: points
+                                  format: int32
+                                  type: integer
+                                value:
+                                  description: value
+                                  format: int32
+                                  type: integer
+                              type: object
+                            type: array
+                        type: object
+                      type: array
+                    id:
+                      description: id
+                      format: int32
+                      type: integer
+                    stats:
+                      description: stats
+                      properties:
+                        assists:
+                          description: assists
+                          format: int32
+                          type: integer
+                        bonus:
+                          description: bonus
+                          format: int32
+                          type: integer
+                        bps:
+                          description: bps
+                          format: int32
+                          type: integer
+                        clean_sheets:
+                          description: clean_sheets
+                          format: int32
+                          type: integer
+                        creativity:
+                          description: creativity
+                          type: string
+                        expected_assists:
+                          description: expected_assists
+                          type: string
+                        expected_goal_involvements:
+                          description: expected_goal_involvements
+                          type: string
+                        expected_goals:
+                          description: expected_goals
+                          type: string
+                        expected_goals_conceded:
+                          description: expected_goals_conceded
+                          type: string
+                        goals_conceded:
+                          description: goals_conceded
+                          format: int32
+                          type: integer
+                        goals_scored:
+                          description: goals_scored
+                          format: int32
+                          type: integer
+                        ict_index:
+                          description: ict_index
+                          type: string
+                        in_dreamteam:
+                          description: in_dreamteam
+                          type: boolean
+                        influence:
+                          description: influence
+                          type: string
+                        minutes:
+                          description: minutes
+                          format: int32
+                          type: integer
+                        own_goals:
+                          description: own_goals
+                          format: int32
+                          type: integer
+                        penalties_missed:
+                          description: penalties_missed
+                          format: int32
+                          type: integer
+                        penalties_saved:
+                          description: penalties_saved
+                          format: int32
+                          type: integer
+                        red_cards:
+                          description: red_cards
+                          format: int32
+                          type: integer
+                        saves:
+                          description: saves
+                          format: int32
+                          type: integer
+                        starts:
+                          description: starts
+                          format: int32
+                          type: integer
+                        threat:
+                          description: threat
+                          type: string
+                        total_points:
+                          description: total_points
+                          format: int32
+                          type: integer
+                        yellow_cards:
+                          description: yellow_cards
+                          format: int32
+                          type: integer
+                      type: object
+                  type: object
+                type: array
+            type: object
+      summary: GetGameWeek
+  /fixtures/:
+    get:
+      operationId: GetFixtures
+      parameters:
+      - in: query
+        name: event
+        required: false
+        type: integer
+      responses:
+        default:
+          description: default
+          schema:
+            items:
+              properties:
+                code:
+                  description: code
+                  format: int32
+                  type: integer
+                event:
+                  description: event
+                  format: int32
+                  type: integer
+                finished:
+                  description: finished
+                  type: boolean
+                finished_provisional:
+                  description: finished_provisional
+                  type: boolean
+                id:
+                  description: id
+                  format: int32
+                  type: integer
+                kickoff_time:
+                  description: kickoff_time
+                  type: string
+                minutes:
+                  description: minutes
+                  format: int32
+                  type: integer
+                provisional_start_time:
+                  description: provisional_start_time
+                  type: boolean
+                pulse_id:
+                  description: pulse_id
+                  format: int32
+                  type: integer
+                started:
+                  description: started
+                  type: boolean
+                stats:
+                  description: stats
+                  items:
+                    properties:
+                      a:
+                        description: a
+                        items:
+                          properties:
+                            element:
+                              description: element
+                              format: int32
+                              type: integer
+                            value:
+                              description: value
+                              format: int32
+                              type: integer
+                          type: object
+                        type: array
+                      h:
+                        description: h
+                        items:
+                          properties:
+                            element:
+                              description: element
+                              format: int32
+                              type: integer
+                            value:
+                              description: value
+                              format: int32
+                              type: integer
+                          type: object
+                        type: array
+                      identifier:
+                        description: identifier
+                        type: string
+                    type: object
+                  type: array
+                team_a:
+                  description: team_a
+                  format: int32
+                  type: integer
+                team_a_difficulty:
+                  description: team_a_difficulty
+                  format: int32
+                  type: integer
+                team_a_score:
+                  description: team_a_score
+                  format: int32
+                  type: integer
+                team_h:
+                  description: team_h
+                  format: int32
+                  type: integer
+                team_h_difficulty:
+                  description: team_h_difficulty
+                  format: int32
+                  type: integer
+                team_h_score:
+                  description: team_h_score
+                  format: int32
+                  type: integer
+              type: object
+            type: array
+      summary: GetMatchWeekFixtures
+  /leagues-classic/{league_id}/standings/:
+    get:
+      operationId: GetClassicLeagueStandings
+      parameters:
+      - in: path
+        name: league_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get classic league standings
+  /leagues-h2h/{league_id}/standings/:
+    get:
+      operationId: GetH2HLeagueStandings
+      parameters:
+      - in: path
+        name: league_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+      summary: Get H2H league standings
+produces: []
+responses: {}
+schemes:
+- https
+security: []
+securityDefinitions: {}
+swagger: '2.0'
+tags: []
